@@ -1,0 +1,167 @@
+#config_version=5
+
+
+#### Hardware Boards
+
+hardware:
+    platform: p3_roc
+    driverboards: pdb
+
+p_roc:
+    use_watchdog: true
+    watchdog_time: 1s
+
+#### Virtual Controls & Settings
+
+keyboard:
+    z:
+        switch: s_left_flipper
+    "/":
+        switch: s_right_flipper
+    1:
+        switch: s_trough_1
+    2:
+        switch: s_trough_2
+    3:
+        switch: s_trough_3
+    4:
+        switch: s_trough_4
+    5:
+        switch: s_trough_5
+    6:
+        switch: s_trough_6
+    7:
+        switch: s_trough_7
+    8:
+        switch: s_trough_8
+    p:
+        switch: s_plunger
+
+virtual_platform_start_active_switches:
+    s_trough_1
+    s_trough_2
+    s_trough_3
+    s_trough_4
+    s_trough_5
+    s_trough_6
+    s_trough_7
+    s_trough_8
+
+
+#### Media & Display
+
+displays:
+    window:
+      width: 800
+      height: 600
+
+slides:
+    welcome_slide:
+        widgets:
+          - type: text
+            text: PINBALL!
+            font_size: 50
+            color: yellow
+    attract_started:
+        widgets:
+          - type: text
+            text: Fucking play me!!
+            font_size: 70
+            color: green
+
+slide_player:
+    init_done: welcome_slide
+    mode_attract_started: attract_started
+
+#### Switches/Coils
+
+playfields:
+    playfield:
+        tags: default
+        default_source_device: bd_plunger
+
+switches:
+    # -- Flippers
+    s_left_flipper:
+        number:
+        tags: left_flipper
+    s_right_flipper:
+        number:
+        tags: right_flipper
+    
+    # -- Ball Trough TODO: Switch numbers.
+    s_trough_1:
+        number: 
+    s_trough_2:
+        number: 
+    s_trough_3:
+        number: 
+    s_trough_4:
+        number: 
+    s_trough_5:
+        number: 
+    s_trough_6:
+        number: 
+    s_trough_7:
+        number: 
+    s_trough_8:
+        number: 
+    s_trough_jam:
+        number: 
+
+    # -- Plunger
+    s_plunger:
+        number: 
+
+coils:
+    # -- Flippers TODO: switch numbers
+    c_flipper_left:
+        number: 
+        allow_enable: true
+        default_hold_power: 0.125
+        default_pulse_ms: 20
+    c_flipper_right:
+        number: 
+        allow_enable: true
+        default_hold_power: 0.125
+        default_pulse_ms: 20
+
+    # -- Ball Trough TODO: coil number
+    c_trough_eject:
+        number: 
+        default_pulse_ms: 20
+
+    c_plunger_eject:
+        number:
+        default_pulse_ms: 20
+
+# -- Flipper Controls
+flippers:
+    left_flipper:
+        main_coil: c_flipper_left
+        activation_switch: s_left_flipper
+        enable_events: machine_reset_phase_3 # TODO TEMP, WE WILL CHANGE THIS WHEN WE ADD A START GAME!
+    right_flipper:
+        main_coil: c_flipper_right
+        activation_switch: s_right_flipper
+        enable_events: machine_reset_phase_3 # TODO TEMP, WE WILL CHANGE THIS WHEN WE ADD A START GAME!
+
+# -- Ball Trough Controls
+ball_devices:
+    bd_trough:
+        ball_switches: s_trough_1, s_trough_2, s_trough_3, s_trough_4, s_trough_5, s_trough_6, s_trough_7, s_trough_8
+        eject_coil: c_trough_eject
+        tags: trough, home, drain
+        jam_switch: s_trough_jam
+        eject_coil_jam_pulse: 15ms 
+        eject_targets: bd_plunger
+        debug: yes
+
+    # bd_plunger is a placeholder just so the trough's eject_targets are valid
+    bd_plunger:
+        ball_switches: s_plunger
+        mechanical_eject: true
+        eject_coil: c_plunger_eject
+        eject_timeouts: 3s
+        debug: yes
+

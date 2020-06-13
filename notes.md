@@ -15,3 +15,5 @@ new error! that helped. Now looking into installing: https://visualstudio.micros
 because of https://stackoverflow.com/questions/29846087/microsoft-visual-c-14-0-is-required-unable-to-find-vcvarsall-bat
 
 Fuck all that noise, just use python 3.6
+
+Our hardware: https://docs.missionpinball.org/en/latest/hardware/multimorphic/mac.html
