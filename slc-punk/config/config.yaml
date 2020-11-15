@@ -36,6 +36,8 @@ keyboard:
         switch: s_trough_8
     p:
         switch: s_plunger
+    s: 
+        switch: s_start
 
 virtual_platform_start_active_switches:
     s_trough_1
@@ -112,6 +114,11 @@ switches:
     # -- Plunger
     s_plunger:
         number: 
+
+    # -- User Buttons
+    s_start:
+        number:
+        tags: start
 
 coils:
     # -- Flippers TODO: switch numbers
