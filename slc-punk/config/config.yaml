@@ -146,14 +146,14 @@ coils:
         default_hold_power: 0.125
         default_pulse_ms: 20
 
-    # -- Ball Trough TODO: coil number
-    c_trough_eject:
-        number: 
-        default_pulse_ms: 20
+    # # -- Ball Trough TODO: coil number
+    # c_trough_eject:
+    #     number: 
+    #     default_pulse_ms: 20
 
-    c_plunger_eject:
-        number:
-        default_pulse_ms: 20
+    # c_plunger_eject:
+    #     number:
+    #     default_pulse_ms: 20
 
 # -- Flipper Controls
 flippers:
@@ -166,22 +166,22 @@ flippers:
         activation_switch: s_right_flipper
         enable_events: machine_reset_phase_3 # TODO TEMP, WE WILL CHANGE THIS WHEN WE ADD A START GAME!
 
-# -- Ball Trough Controls
-ball_devices:
-    bd_trough:
-        ball_switches: s_trough_1, s_trough_2, s_trough_3, s_trough_4, s_trough_5, s_trough_6, s_trough_7, s_trough_8
-        eject_coil: c_trough_eject
-        tags: trough, home, drain
-        jam_switch: s_trough_jam
-        eject_coil_jam_pulse: 15ms 
-        eject_targets: bd_plunger
-        debug: yes
+# -- Ball Trough Controls TODO: Add real shit
+# ball_devices:
+#     bd_trough:
+#         ball_switches: s_trough_1, s_trough_2, s_trough_3, s_trough_4, s_trough_5, s_trough_6, s_trough_7, s_trough_8
+#         eject_coil: c_trough_eject
+#         tags: trough, home, drain
+#         jam_switch: s_trough_jam
+#         eject_coil_jam_pulse: 15ms 
+#         eject_targets: bd_plunger
+#         debug: yes
 
-    # bd_plunger is a placeholder just so the trough's eject_targets are valid
-    bd_plunger:
-        ball_switches: s_plunger
-        mechanical_eject: true
-        eject_coil: c_plunger_eject
-        eject_timeouts: 3s
-        debug: yes
+#     # bd_plunger is a placeholder just so the trough's eject_targets are valid
+#     bd_plunger:
+#         ball_switches: s_plunger
+#         mechanical_eject: true
+#         eject_coil: c_plunger_eject
+#         eject_timeouts: 3s
+#         debug: yes
 
