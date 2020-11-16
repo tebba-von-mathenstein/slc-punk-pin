@@ -86,12 +86,13 @@ switches:
 
     # -- Plunger
     s_plunger:
-        number: 
+        number: A0-B1-3
+        tags: plunger
 
     # -- User Buttons
-    s_start:
-        number:
-        tags: start
+    # s_start:
+    #     number:
+    #     tags: start
 
 coils:
     c_flipper_left:
