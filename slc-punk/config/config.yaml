@@ -18,44 +18,44 @@ keyboard:
         switch: s_left_flipper
     "/":
         switch: s_right_flipper
-    1:
-        switch: s_trough_1
-        toggle: true
-    2:
-        switch: s_trough_2
-        toggle: true
-    3:
-        switch: s_trough_3
-        toggle: true
-    4:
-        switch: s_trough_4
-        toggle: true
-    5:
-        switch: s_trough_5
-        toggle: true
-    6:
-        switch: s_trough_6
-        toggle: true
-    7:
-        switch: s_trough_7
-        toggle: true
-    8:
-        switch: s_trough_8
-        toggle: true
-    p:
-        switch: s_plunger
-    s: 
-        switch: s_start
+    # 1:
+    #     switch: s_trough_1
+    #     toggle: true
+    # 2:
+    #     switch: s_trough_2
+    #     toggle: true
+    # 3:
+    #     switch: s_trough_3
+    #     toggle: true
+    # 4:
+    #     switch: s_trough_4
+    #     toggle: true
+    # 5:
+    #     switch: s_trough_5
+    #     toggle: true
+    # 6:
+    #     switch: s_trough_6
+    #     toggle: true
+    # 7:
+    #     switch: s_trough_7
+    #     toggle: true
+    # 8:
+    #     switch: s_trough_8
+    #     toggle: true
+    # p:
+    #     switch: s_plunger
+    # s: 
+    #     switch: s_start
 
-virtual_platform_start_active_switches:
-    s_trough_1,
-    s_trough_2,
-    s_trough_3,
-    s_trough_4,
-    s_trough_5,
-    s_trough_6,
-    s_trough_7,
-    s_trough_8
+# virtual_platform_start_active_switches:
+#     s_trough_1,
+#     s_trough_2,
+#     s_trough_3,
+#     s_trough_4,
+#     s_trough_5,
+#     s_trough_6,
+#     s_trough_7,
+#     s_trough_8
 
 
 #### Media & Display
@@ -106,33 +106,33 @@ switches:
     
     # COMMENTED OUT TO DEPLOY WE NEED REAL NUMBERS #
     # # -- Ball Trough TODO: Switch numbers.
-    # s_trough_1:
-    #     number: 
-    # s_trough_2:
-    #     number: 
-    # s_trough_3:
-    #     number: 
-    # s_trough_4:
-    #     number: 
-    # s_trough_5:
-    #     number: 
-    # s_trough_6:
-    #     number: 
-    # s_trough_7:
-    #     number: 
-    # s_trough_8:
-    #     number: 
-    # s_trough_jam:
-    #     number: 
+    s_trough_1:
+        number: 
+    s_trough_2:
+        number: 
+    s_trough_3:
+        number: 
+    s_trough_4:
+        number: 
+    s_trough_5:
+        number: 
+    s_trough_6:
+        number: 
+    s_trough_7:
+        number: 
+    s_trough_8:
+        number: 
+    s_trough_jam:
+        number: 
 
-    # # -- Plunger
-    # s_plunger:
-    #     number: 
+    # -- Plunger
+    s_plunger:
+        number: 
 
-    # # -- User Buttons
-    # s_start:
-    #     number:
-    #     tags: start
+    # -- User Buttons
+    s_start:
+        number:
+        tags: start
 
 coils:
     c_flipper_left:
@@ -147,13 +147,13 @@ coils:
         default_pulse_ms: 20
 
     # # -- Ball Trough TODO: coil number
-    # c_trough_eject:
-    #     number: 
-    #     default_pulse_ms: 20
+    c_trough_eject:
+        number: 
+        default_pulse_ms: 20
 
-    # c_plunger_eject:
-    #     number:
-    #     default_pulse_ms: 20
+    c_plunger_eject:
+        number:
+        default_pulse_ms: 20
 
 # -- Flipper Controls
 flippers:
@@ -167,21 +167,21 @@ flippers:
         enable_events: machine_reset_phase_3 # TODO TEMP, WE WILL CHANGE THIS WHEN WE ADD A START GAME!
 
 # -- Ball Trough Controls TODO: Add real shit
-# ball_devices:
-#     bd_trough:
-#         ball_switches: s_trough_1, s_trough_2, s_trough_3, s_trough_4, s_trough_5, s_trough_6, s_trough_7, s_trough_8
-#         eject_coil: c_trough_eject
-#         tags: trough, home, drain
-#         jam_switch: s_trough_jam
-#         eject_coil_jam_pulse: 15ms 
-#         eject_targets: bd_plunger
-#         debug: yes
+ball_devices:
+    bd_trough:
+        ball_switches: s_trough_1, s_trough_2, s_trough_3, s_trough_4, s_trough_5, s_trough_6, s_trough_7, s_trough_8
+        eject_coil: c_trough_eject
+        tags: trough, home, drain
+        # jam_switch: s_trough_jam
+        eject_coil_jam_pulse: 15ms 
+        eject_targets: bd_plunger
+        debug: yes
 
-#     # bd_plunger is a placeholder just so the trough's eject_targets are valid
-#     bd_plunger:
-#         ball_switches: s_plunger
-#         mechanical_eject: true
-#         eject_coil: c_plunger_eject
-#         eject_timeouts: 3s
-#         debug: yes
+    # bd_plunger is a placeholder just so the trough's eject_targets are valid
+    bd_plunger:
+        ball_switches: s_plunger
+        mechanical_eject: true
+        eject_coil: c_plunger_eject
+        eject_timeouts: 3s
+        debug: yes
 
