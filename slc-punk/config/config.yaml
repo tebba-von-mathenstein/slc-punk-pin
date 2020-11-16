@@ -69,6 +69,23 @@ playfields:
 
 switches:
     # -- Flippers
+    placeholder_a: 
+        number: A0-B1-1
+    placeholder_b: 
+        number: A0-B1-2
+    placeholder_c: 
+        number: A0-B1-4
+    placeholder_d: 
+        number: A0-B1-5
+    placeholder_e: 
+        number: A0-B1-6
+    placeholder_f: 
+        number: A0-B1-8
+    placeholder_g: 
+        number: A0-B1-9
+    placeholder_h: 
+        number: A0-B1-10
+    
     s_left_flipper:
         number: A0-B1-7
         tags: left_flipper
@@ -96,12 +113,12 @@ switches:
 
 coils:
     c_flipper_left:
-        number: A0-B1-6
+        number: A1-B1-6
         allow_enable: true
         default_hold_power: 0.125
         default_pulse_ms: 20
     c_flipper_right:
-        number: A0-B1-4
+        number: A1-B1-4
         allow_enable: true
         default_hold_power: 0.125
         default_pulse_ms: 20
