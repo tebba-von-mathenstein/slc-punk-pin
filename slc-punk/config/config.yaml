@@ -104,34 +104,35 @@ switches:
         number: A0-B1-7
         tags: right_flipper
     
-    # -- Ball Trough TODO: Switch numbers.
-    s_trough_1:
-        number: 
-    s_trough_2:
-        number: 
-    s_trough_3:
-        number: 
-    s_trough_4:
-        number: 
-    s_trough_5:
-        number: 
-    s_trough_6:
-        number: 
-    s_trough_7:
-        number: 
-    s_trough_8:
-        number: 
-    s_trough_jam:
-        number: 
+    # COMMENTED OUT TO DEPLOY WE NEED REAL NUMBERS #
+    # # -- Ball Trough TODO: Switch numbers.
+    # s_trough_1:
+    #     number: 
+    # s_trough_2:
+    #     number: 
+    # s_trough_3:
+    #     number: 
+    # s_trough_4:
+    #     number: 
+    # s_trough_5:
+    #     number: 
+    # s_trough_6:
+    #     number: 
+    # s_trough_7:
+    #     number: 
+    # s_trough_8:
+    #     number: 
+    # s_trough_jam:
+    #     number: 
 
-    # -- Plunger
-    s_plunger:
-        number: 
+    # # -- Plunger
+    # s_plunger:
+    #     number: 
 
-    # -- User Buttons
-    s_start:
-        number:
-        tags: start
+    # # -- User Buttons
+    # s_start:
+    #     number:
+    #     tags: start
 
 coils:
     c_flipper_left:
