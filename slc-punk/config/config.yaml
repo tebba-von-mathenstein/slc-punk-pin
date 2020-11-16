@@ -79,12 +79,6 @@ switches:
         number: A0-B1-5
     placeholder_e: 
         number: A0-B1-6
-    placeholder_f: 
-        number: A0-B1-8
-    placeholder_g: 
-        number: A0-B1-9
-    placeholder_h: 
-        number: A0-B1-10
     
     s_left_flipper:
         number: A0-B1-7
