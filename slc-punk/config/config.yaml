@@ -5,9 +5,9 @@
 
 hardware:
     platform: p3_roc
-    driverboards: pdb
 
 p_roc:
+    driverboards: pdb
     use_watchdog: true
     watchdog_time: 1s
 
@@ -20,20 +20,28 @@ keyboard:
         switch: s_right_flipper
     1:
         switch: s_trough_1
+        toggle: true
     2:
         switch: s_trough_2
+        toggle: true
     3:
         switch: s_trough_3
+        toggle: true
     4:
         switch: s_trough_4
+        toggle: true
     5:
         switch: s_trough_5
+        toggle: true
     6:
         switch: s_trough_6
+        toggle: true
     7:
         switch: s_trough_7
+        toggle: true
     8:
         switch: s_trough_8
+        toggle: true
     p:
         switch: s_plunger
     s: 
@@ -70,10 +78,15 @@ slides:
             text: Fucking play me!!
             font_size: 70
             color: green
+    ball_started:
+        widgets:
+            type: text
+            text: PLAYER (number) BALL (ball)
 
 slide_player:
     init_done: welcome_slide
     mode_attract_started: attract_started
+    mode_game_started: ball_started
 
 #### Switches/Coils
 
@@ -85,10 +98,10 @@ playfields:
 switches:
     # -- Flippers
     s_left_flipper:
-        number:
+        number: A0-B1-5
         tags: left_flipper
     s_right_flipper:
-        number:
+        number: A0-B1-7
         tags: right_flipper
     
     # -- Ball Trough TODO: Switch numbers.
@@ -121,14 +134,13 @@ switches:
         tags: start
 
 coils:
-    # -- Flippers TODO: switch numbers
     c_flipper_left:
-        number: 
+        number: A0-B1-6
         allow_enable: true
         default_hold_power: 0.125
         default_pulse_ms: 20
     c_flipper_right:
-        number: 
+        number: A0-B1-4
         allow_enable: true
         default_hold_power: 0.125
         default_pulse_ms: 20
