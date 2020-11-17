@@ -67,6 +67,9 @@ playfields:
         tags: default
         default_source_device: bd_plunger
 
+
+## EVERYTHING APPEARS TO BE OFF BY 2 ##
+
 switches:
     # -- Flippers
     placeholder_a: 
@@ -81,10 +84,10 @@ switches:
         number: A0-B1-6
     
     s_left_flipper:
-        number: A0-B1-7
+        number: A0-B1-3
         tags: left_flipper
     s_right_flipper:
-        number: A0-B1-3
+        number: A0-B1-7
         tags: right_flipper
 
     # -- Plunger
