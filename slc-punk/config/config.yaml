@@ -120,11 +120,11 @@ coils:
 
     # -- Ball Trough
     c_trough_eject:
-        number: A1-B1-2
+        number: A1-B1-3 # FAKE
         default_pulse_ms: 20
 
     c_plunger_eject:
-        number: A1-B1-1
+        number: A1-B1-1 # FAKE
         default_pulse_ms: 20
 
 # -- Flipper Controls
