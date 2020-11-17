@@ -68,8 +68,7 @@ playfields:
         default_source_device: bd_plunger
 
 
-## EVERYTHING APPEARS TO BE OFF BY 2 ##
-
+## EVERYTHING APPEARS TO BE OFF BY 2, real pin 7 is "5" ##
 switches:
     # -- Flippers
     placeholder_a: 
@@ -84,10 +83,10 @@ switches:
         number: A0-B1-6
     
     s_left_flipper:
-        number: A0-B1-3
+        number: A0-B1-3   # ACTUAL 5
         tags: left_flipper
     s_right_flipper:
-        number: A0-B1-5
+        number: A0-B1-5   # ACTUAL 7
         tags: right_flipper
 
     # -- Plunger
@@ -109,12 +108,12 @@ switches:
 
 coils:
     c_flipper_left:
-        number: A1-B1-6
+        number: A1-B1-4
         allow_enable: true
         default_hold_power: 0.125
         default_pulse_ms: 20
     c_flipper_right:
-        number: A1-B1-4
+        number: A1-B1-6
         allow_enable: true
         default_hold_power: 0.125
         default_pulse_ms: 20
