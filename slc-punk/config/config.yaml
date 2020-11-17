@@ -113,7 +113,7 @@ coils:
         default_hold_power: 0.125
         default_pulse_ms: 20
     c_flipper_right:
-        number: A1-B1-6
+        number: A1-B1-2
         allow_enable: true
         default_hold_power: 0.125
         default_pulse_ms: 20
