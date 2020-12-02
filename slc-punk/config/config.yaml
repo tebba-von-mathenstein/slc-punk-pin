@@ -70,14 +70,17 @@ playfields:
 
 ## EVERYTHING APPEARS TO BE OFF BY 2, real pin 7 is "5" ##
 switches:
-    # -- Flippers
+    
     placeholder_b: 
         number: A0-B1-2
     placeholder_c: 
         number: A0-B1-4
-    placeholder_e: 
+    
+    # -- Random components
+    s_subway_eject: 
         number: A0-B1-6
     
+    # -- Flippers
     s_left_flipper:
         number: A0-B1-3   # ACTUAL 5
         tags: left_flipper
@@ -106,6 +109,7 @@ switches:
         
 
 coils:
+    # -- Flippers
     c_flipper_left:
         number: A1-B1-4
         allow_enable: true
@@ -125,6 +129,10 @@ coils:
     c_plunger_eject:
         number: A1-B1-0
         default_pulse_ms: 20
+
+    # -- Random components
+    c_subway_eject:
+        number: A1-B1-6
 
 # -- Flipper Controls
 flippers:
@@ -152,4 +160,9 @@ ball_devices:
         eject_coil: c_plunger_eject
         eject_timeouts: 3s
         debug: yes
+
+    bd_subway_vuc:
+        ball_switches: s_subway_eject
+        eject_coil: c_subway_eject
+        eject_timeout: 2s
 
