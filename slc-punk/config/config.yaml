@@ -75,8 +75,6 @@ switches:
         number: A0-B1-2
     placeholder_c: 
         number: A0-B1-4
-    placeholder_d: 
-        number: A0-B1-7
     placeholder_e: 
         number: A0-B1-6
     
@@ -90,21 +88,22 @@ switches:
     # -- Plunger
     s_plunger:
         number: A0-B1-1
-        tags: plunger
+        tags: plunger, playfield_active
 
     # -- Ball Trough 
     s_trough_1: 
-        number: A0-B0-6 
+        number: A0-B0-6
         type: NC
 
     s_trough_jam:
-        number: A0-B0-7 
+        number: A0-B0-7
         type: NC
 
     # -- User Buttons
-    # s_start:
-    #     number:
-    #     tags: start
+    s_start:
+        number: A0-B1-7
+        tags: start
+        
 
 coils:
     c_flipper_left:
@@ -138,15 +137,16 @@ flippers:
         activation_switch: s_right_flipper
         enable_events: machine_reset_phase_3 # TODO TEMP, WE WILL CHANGE THIS WHEN WE ADD A START GAME!
 
-# -- Ball Trough Controls TODO: Add real shit
+# -- Ball Trough Controls
 ball_devices:
     bd_trough:
         ball_switches: s_trough_1, s_trough_jam
         eject_coil: c_trough_eject
-        tags: trough, home, drain
+        eject_coil_jam_pulse: 15ms
         jam_switch: s_trough_jam
-        eject_coil_jam_pulse: 15ms 
+         
         eject_targets: bd_trough
+        tags: trough, home, drain
         debug: yes
 
     bd_plunger:
