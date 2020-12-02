@@ -161,7 +161,7 @@ ball_devices:
         eject_timeouts: 3s
         debug: yes
 
-    bd_subway_vuc:
+    bd_subway_vuk:
         ball_switches: s_subway_eject
         eject_coil: c_subway_eject
         eject_timeout: 2s
