@@ -21,10 +21,10 @@ keyboard:
     1:
         switch: s_trough_1
         toggle: true
-    # p:
-    #     switch: s_plunger
-    # s: 
-    #     switch: s_start
+    p:
+        switch: s_plunger
+    s: 
+        switch: s_start
 
 virtual_platform_start_active_switches:
     s_trough_1
@@ -71,8 +71,6 @@ playfields:
 ## EVERYTHING APPEARS TO BE OFF BY 2, real pin 7 is "5" ##
 switches:
     # -- Flippers
-    placeholder_a: 
-        number: A0-B1-1
     placeholder_b: 
         number: A0-B1-2
     placeholder_c: 
