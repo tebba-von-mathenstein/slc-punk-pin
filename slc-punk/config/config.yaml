@@ -131,11 +131,10 @@ flippers:
     left_flipper:
         main_coil: c_flipper_left
         activation_switch: s_left_flipper
-        enable_events: machine_reset_phase_3 # TODO TEMP, WE WILL CHANGE THIS WHEN WE ADD A START GAME!
+
     right_flipper:
         main_coil: c_flipper_right
         activation_switch: s_right_flipper
-        enable_events: machine_reset_phase_3 # TODO TEMP, WE WILL CHANGE THIS WHEN WE ADD A START GAME!
 
 # -- Ball Trough Controls
 ball_devices:
@@ -144,8 +143,8 @@ ball_devices:
         eject_coil: c_trough_eject
         eject_coil_jam_pulse: 15ms
         jam_switch: s_trough_jam
-         
-        eject_targets: bd_trough
+        mechanical_eject: true
+        eject_targets: bd_plunger
         tags: trough, home, drain
         debug: yes
 
