@@ -88,7 +88,7 @@ switches:
     # -- Plunger
     s_plunger:
         number: A0-B1-1
-        tags: plunger, playfield_active
+        tags: plunger
 
     # -- Ball Trough 
     s_trough_1: 
