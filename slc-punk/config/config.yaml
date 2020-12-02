@@ -91,15 +91,17 @@ switches:
 
     # -- Plunger
     s_plunger:
-        number: A0-B1-8 # Fake, UPDATE LATER
+        number: A0-B1-1
         tags: plunger
 
-    # # -- Ball Trough TODO: Switch numbers.
+    # -- Ball Trough 
     s_trough_1: 
-        number: A0-B1-9 # FAKE UPDATE LATER
+        number: A0-B0-6 
+        type: NC
 
     s_trough_jam:
-        number: A0-B1-10 # FAKE, UPDATE LATER
+        number: A0-B0-7 
+        type: NC
 
     # -- User Buttons
     # s_start:
@@ -120,11 +122,11 @@ coils:
 
     # -- Ball Trough
     c_trough_eject:
-        number: A1-B1-3 # FAKE
+        number: A1-B1-1
         default_pulse_ms: 20
 
     c_plunger_eject:
-        number: A1-B1-1 # FAKE
+        number: A1-B1-0
         default_pulse_ms: 20
 
 # -- Flipper Controls
@@ -141,7 +143,7 @@ flippers:
 # -- Ball Trough Controls TODO: Add real shit
 ball_devices:
     bd_trough:
-        ball_switches: s_trough_1
+        ball_switches: s_trough_1, s_trough_jam
         eject_coil: c_trough_eject
         tags: trough, home, drain
         jam_switch: s_trough_jam
@@ -149,7 +151,6 @@ ball_devices:
         eject_targets: bd_plunger
         debug: yes
 
-    # bd_plunger is a placeholder just so the trough's eject_targets are valid
     bd_plunger:
         ball_switches: s_plunger
         mechanical_eject: true
