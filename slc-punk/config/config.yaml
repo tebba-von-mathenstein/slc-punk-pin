@@ -146,7 +146,7 @@ ball_devices:
         tags: trough, home, drain
         jam_switch: s_trough_jam
         eject_coil_jam_pulse: 15ms 
-        eject_targets: c_trough_eject
+        eject_targets: bd_trough
         debug: yes
 
     bd_plunger:
