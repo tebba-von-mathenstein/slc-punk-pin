@@ -150,7 +150,6 @@ ball_devices:
 
     bd_plunger:
         ball_switches: s_plunger
-        mechanical_eject: true
         eject_coil: c_plunger_eject
         eject_timeouts: 3s
         debug: yes
