@@ -17,3 +17,13 @@ because of https://stackoverflow.com/questions/29846087/microsoft-visual-c-14-0-
 Fuck all that noise, just use python 3.6
 
 Our hardware: https://docs.missionpinball.org/en/latest/hardware/multimorphic/mac.html
+
+Dec 2:
+ * Adding: opto's on bank 0 in the trough
+
+ ### General Notes For Our Setup
+
+ Switches on board A0
+ Coils on board A1
+
+ 
