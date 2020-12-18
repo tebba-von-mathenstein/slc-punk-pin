@@ -201,9 +201,6 @@ coils:
         number: A1-B1-6
 
     # -- Wired but unlabeled coils
-    board_1_bank_1_pin_1:
-        number: A1-B1-1
-
     board_1_bank_1_pin_3:
         number: A1-B1-3
 
