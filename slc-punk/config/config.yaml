@@ -179,15 +179,6 @@ switches:
     board_2_bank_0_pin_7:
         number: A2-B0-7
 
-
-
-
-
-
-
-
-
-
 coils:
     # -- Flippers
     c_flipper_left:
@@ -258,7 +249,7 @@ flippers:
 # -- Ball Trough Controls
 ball_devices:
     bd_trough:
-        ball_switches: s_trough_1, s_trough_jam
+        ball_switches: s_ball_trough_1, s_ball_trough_2, s_ball_trough_3, s_ball_trough_4, s_ball_trough_5, s_ball_trough_6, s_trough_jam
         eject_coil: c_trough_eject
         eject_coil_jam_pulse: 15ms
         jam_switch: s_trough_jam
