@@ -118,24 +118,19 @@ switches:
     # -- Slingshots
     s_left_slingshot:
         number: A2-B1-5
-        default_pulse_ms: 15ms
 
     s_right_slingshot:
         number: A0-B1-0
-        default_pulse_ms: 15ms
 
     # -- Pop bumpers
     s_right_pop:
         number: A2-B0-0
-        default_pulse_ms: 15ms
 
     s_left_pop:
         number: A2-B1-6
-        default_pulse_ms: 15ms
 
     s_center_pop:
         number: A2-B1-7
-        default_pulse_ms: 15ms
 
     # -- Targets
     s_center_standup:
@@ -217,19 +212,24 @@ coils:
     # -- Slingshots
     c_right_slingshot:
         number: A1-B1-3
+        default_pulse_ms: 15ms
 
     c_left_slingshot:
         number: A1-B1-5
+        default_pulse_ms: 15ms
 
     # -- Pops
     c_right_pop:
         number: A1-B1-7
+        default_pulse_ms: 15ms
         
     c_left_pop:
         number: A1-B0-1
+        default_pulse_ms: 15ms
     
     c_center_pop:
         number: A1-B0-2
+        default_pulse_ms: 15ms
 
     # -- Targets
     c_captive_ball_lock_eject:
