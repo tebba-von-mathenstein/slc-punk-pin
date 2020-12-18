@@ -125,21 +125,25 @@ switches:
     # -- Pop bumpers
     s_right_pop:
         number: A2-B0-0
+
     s_left_pop:
         number: A2-B1-6
+
     s_center_pop:
         number: A2-B1-7
 
     # -- Targets
     s_center_standup:
         number: A2-B0-3
+        debounce: quick
+        ignore_window_ms: 500ms
+
+    s_subway_drop_is_down:
+        number: A2-B0-1
 
     # -- Subway Components
     s_subway_eject: 
         number: A0-B1-6
-
-    s_subway_drop_is_down:
-        number: A2-B0-1
 
     # -- Misc Components:
     # Left ramp down when on!
@@ -151,7 +155,7 @@ switches:
         number: A0-B1-7
         tags: start
 
-    # -- Wired but unlabeled switches
+    # -- Unlabeled switches that we can access
     board_0_bank_0_pin_1:
         number: A0-B0-1
 
@@ -201,40 +205,46 @@ coils:
         number: A1-B1-0
         default_pulse_ms: 20
 
-    # -- Random components
+    # -- Subway Components
     c_subway_eject:
         number: A1-B1-6
 
-    # -- Wired but unlabeled coils
-    board_1_bank_1_pin_3:
+    # -- Slingshots
+    c_right_slingshot:
         number: A1-B1-3
 
-    board_1_bank_1_pin_5:
+    c_left_slingshot:
         number: A1-B1-5
 
-    board_1_bank_1_pin_7:
+    # -- Pops
+    c_right_pop:
         number: A1-B1-7
-
-    board_1_bank_0_pin_0:
-        number: A1-B0-0
-
-    board_1_bank_0_pin_2:
+        
+    c_left_pop:
+        number: A1-B0-1
+    
+    c_center_pop:
         number: A1-B0-2
 
-    board_1_bank_0_pin_3:
+    # -- Targets
+    c_captive_ball_lock_eject:
+        number: A1-B0-0
+
+    c_three_bank_drop_reset:
+        number: A1-B0-7
+    
+    c_subway_raise_drop_target:
         number: A1-B0-3
 
-    board_1_bank_0_pin_4:
+    c_subway_lower_drop_target:
         number: A1-B0-4
 
-    board_1_bank_0_pin_5:
+    # -- Ramp
+    c_left_ramp_up:
         number: A1-B0-5
 
-    board_1_bank_0_pin_6:
+    c_left_ramp_down:
         number: A1-B0-6
-
-    board_1_bank_0_pin_7:
-        number: A1-B0-7
  
 # -- Flipper Controls
 flippers:
@@ -268,4 +278,33 @@ ball_devices:
         eject_coil: c_subway_eject
         eject_timeouts: 1s
         debug: yes
+
+# -- Autofire devices
+autofire_coils:
+    left_slingshot:
+        coil: c_left_slingshot
+        switch: s_left_slingshot
+
+    right_slingshot:
+        coil: c_right_slingshot
+        switch: s_right_slingshot
+
+    left_pop:
+        coil: c_left_pop
+        switch: s_left_pop
+    
+    right_pop:
+        coil: c_right_pop
+        switch: s_right_pop
+    
+    center_pop:
+        coil: c_center_pop
+        switch: s_center_pop
+
+# -- Targets
+drop_targets:
+    d_subway:
+        switch: s_subway_drop_is_down
+        reset_coil: c_subway_raise_drop_target
+        knockdown_coil: c_subway_lower_drop_target
 
