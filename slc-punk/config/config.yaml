@@ -118,19 +118,24 @@ switches:
     # -- Slingshots
     s_left_slingshot:
         number: A2-B1-5
+        default_pulse_ms: 15
 
     s_right_slingshot:
         number: A0-B1-0
+        default_pulse_ms: 15
 
     # -- Pop bumpers
     s_right_pop:
         number: A2-B0-0
+        default_pulse_ms: 15
 
     s_left_pop:
         number: A2-B1-6
+        default_pulse_ms: 15
 
     s_center_pop:
         number: A2-B1-7
+        default_pulse_ms: 15
 
     # -- Targets
     s_center_standup:
