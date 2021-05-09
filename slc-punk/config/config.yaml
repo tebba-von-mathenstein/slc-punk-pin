@@ -60,6 +60,11 @@ slide_player:
     mode_attract_started: attract_started
     mode_game_started: ball_started
 
+##### MODES #####
+modes:
+  - base
+  - skillshot
+
 #### Switches/Coils
 
 playfields:
@@ -155,32 +160,30 @@ switches:
         number: A0-B1-7
         tags: start
 
-    # -- Unlabeled switches that we can access
-    board_0_bank_0_pin_1:
-        number: A0-B0-1
-
-    board_0_bank_0_pin_2:
-        number: A0-B0-2
-
-    board_0_bank_0_pin_3:
-        number: A0-B0-3
-
-    board_0_bank_0_pin_4:
+    # Misc Playfield Components
+    s_left_orbit:
         number: A0-B0-4
-
-    board_0_bank_0_pin_5:
+    s_captive_ball_lock:
         number: A0-B0-5
-
-    board_2_bank_0_pin_4:
+    s_spinner:
         number: A2-B0-4
 
-    board_2_bank_0_pin_5:
+    # Lane switches
+    s_right_in_lane:
+        number: A0-B0-1
+    s_right_out_lane:
+        number: A0-B0-0
+    s_left_in_lane:
+        number: A0-B0-2
+    s_left_out_lane:
+        number: A0-B0-3
+
+    # Rollovers
+    s_right_rollover:
         number: A2-B0-5
-
-    board_2_bank_0_pin_6:
+    s_center_rollover:
         number: A2-B0-6
-
-    board_2_bank_0_pin_7:
+    s_left_rollover:
         number: A2-B0-7
 
 coils:
@@ -199,7 +202,7 @@ coils:
     # -- Ball Trough
     c_trough_eject:
         number: A1-B1-1
-        default_pulse_ms: 20
+        default_pulse_ms: 17 
 
     c_plunger_eject:
         number: A1-B1-0
@@ -208,6 +211,8 @@ coils:
     # -- Subway Components
     c_subway_eject:
         number: A1-B1-6
+        default_pulse_ms: 12 # 12 is experimentally confirmed 
+
 
     # -- Slingshots
     c_right_slingshot:
