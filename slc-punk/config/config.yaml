@@ -65,6 +65,11 @@ modes:
   - base
   - skillshot
 
+#### Events #####
+event_player:
+    ball_started: start_skillshot
+    
+
 #### Switches/Coils
 
 playfields:
@@ -280,6 +285,7 @@ ball_devices:
     bd_plunger:
         ball_switches: s_plunger
         eject_coil: c_plunger_eject
+        mechanical_eject: True
         eject_timeouts: 3s
         debug: yes
 
