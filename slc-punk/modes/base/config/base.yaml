@@ -27,3 +27,23 @@ slide_player:
         anchor_x: right
         anchor_y: bottom
         font_size: 50
+
+sequence_shots:
+    right_orbit:
+        switch_sequence: s_spinner, s_left_orbit 
+        sequence_timeout: 1s
+    left_orbit:
+        switch_sequence: s_left_orbit, s_spinner 
+        sequence_timeout: 1s
+
+shots:
+    spinner:
+        switch: s_spinner
+
+variable_player:
+    right_orbit_hit: 
+        score: 2000
+    left_orbit_hit: 
+        score: 1000
+    spinner_hit:
+        score: 100
