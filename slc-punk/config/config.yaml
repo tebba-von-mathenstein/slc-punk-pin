@@ -288,6 +288,7 @@ ball_devices:
         mechanical_eject: True
         eject_timeouts: 3s
         debug: yes
+        player_controlled_eject_event: s_right_flipper_active
 
     bd_subway_vuk:
         ball_switches: s_subway_eject

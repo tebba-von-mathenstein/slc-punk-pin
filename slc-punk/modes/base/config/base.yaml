@@ -46,4 +46,4 @@ variable_player:
     left_orbit_hit: 
         score: 1000
     spinner_hit:
-        score: 100
+        score: 10
